@@ -1,3 +1,5 @@
+from uuid import uuid4
+
 from firebase_admin import firestore
 from db_init import *
 
@@ -22,3 +24,7 @@ doc_ref.set({
     'Unknown':'name',
     'Monitoring_Camera':'df'
 })
+
+blob = bucket.blob('Images/' + 'dd.jpg')
+blob.upload_from_filename(filename='./Images/' + 'dd.jpg')
+print(blob.public_url)

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63d4c21e-6f54-4543-9461-52e9e7063068" name="Changes" comment="[feat]: Implement 'i2e2_webapp'">
-      <change afterPath="$PROJECT_DIR$/desktop.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/i2e2_web_test/static/images/door_old_1280.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/i2e2_web_test/static/images/door_opening_animation.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/i2e2_web_test/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/i2e2_web_test/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

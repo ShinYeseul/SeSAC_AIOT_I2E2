@@ -11,7 +11,7 @@ doc_ref.set({
     'Time_stamp':'2022',
     'Door_Status':'o',
     'Face_Image':'dfd',
-    'Name':'name',
+    'Name':'oo',
     'Monitoring_Camera':'df'
 })
 
@@ -21,7 +21,7 @@ doc_ref.set({
     'Time_stamp':'2022',
     'Door_Status':'o',
     'Face_Image':'dfd',
-    'Unknown':'name',
+    'Name':'Unknown',
     'Monitoring_Camera':'df'
 })
 

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63d4c21e-6f54-4543-9461-52e9e7063068" name="Changes" comment="[feat]: Implement 'dazzle_webapp'">
+    <list default="true" id="63d4c21e-6f54-4543-9461-52e9e7063068" name="Changes" comment="[feat]: Implement 'i2e2_webapp'">
+      <change afterPath="$PROJECT_DIR$/desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/i2e2_web_test/static/images/door_old_1280.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/i2e2_web_test/static/images/door_opening_animation.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/i2e2_web_test/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/i2e2_web_test/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +70,8 @@
       <recent name="C:\Users\SBAUser\Desktop\SeSAC_AIOT_I2E2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SBAUser\Desktop\SeSAC_AIOT_I2E2\i2e2_web_test\templates" />
+      <recent name="C:\Users\SBAUser\Desktop\SeSAC_AIOT_I2E2\i2e2_web_test" />
       <recent name="C:\Users\SBAUser\Desktop\SeSAC_AIOT_I2E2\Images" />
     </key>
   </component>
@@ -160,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676620658047</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[feat]: Implement 'i2e2_webapp'">
+      <created>1676621423138</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676621423138</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,6 +194,7 @@
     <MESSAGE value="[feat,1]: Implement 'DB image upload'" />
     <MESSAGE value="[feat]: Implement 'webapp'" />
     <MESSAGE value="[feat]: Implement 'dazzle_webapp'" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat]: Implement 'dazzle_webapp'" />
+    <MESSAGE value="[feat]: Implement 'i2e2_webapp'" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat]: Implement 'i2e2_webapp'" />
   </component>
 </project>

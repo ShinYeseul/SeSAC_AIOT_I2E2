@@ -74,6 +74,25 @@ time.sleep(1.0)
 pwm.stop()
 GPIO.cleanup()
 
+# 트랜젝션
+
+transaction = db.transaction()
+doc_ref = db.collection('person').document('Door_state')
+
+@firestore.transactional
+def update_in_transaction(transaction, doc_ref):
+    snapshot = doc_ref.get(transaction=transaction)
+    total_amount = snapshot.get('total_amount')
+    ntotal_amount = total_amount + 1000
+
+    transaction.update(doc_ref, {'total_amount': ntotal_amount})
+
+    return ntotal_amount
+
+result = update_in_transaction(transaction, doc_ref)
+result
+
+
 # from uuid import uuid4
 
 # from firebase_admin import firestore
@@ -96,30 +115,3 @@ GPIO.cleanup()
 # blob = bucket.blob('Images/' + 'dd.jpg')
 # blob.upload_from_filename(filename='./Images/' + 'dd.jpg')
 # print(blob.public_url)
-
-# import json
-#
-# with open('bank4.json', 'r') as f:
-#     data = json.load(f)
-#
-# # 트랜젝션
-#
-# transaction = db.transaction()
-# doc_ref = db.collection('customer').document('c1')
-#
-#
-# @firestore.transactional
-# def update_in_transaction(transaction, doc_ref):
-#     snapshot = doc_ref.get(transaction=transaction)
-#     total_amount = snapshot.get('total_amount')
-#     ntotal_amount = total_amount + 1000
-#
-#     transaction.update(doc_ref, {
-#         'total_amount': ntotal_amount
-#     })
-#
-#     return ntotal_amount
-#
-#
-# result = update_in_transaction(transaction, doc_ref)
-# result

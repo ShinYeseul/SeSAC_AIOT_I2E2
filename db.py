@@ -2,24 +2,100 @@ from uuid import uuid4
 
 from firebase_admin import firestore
 from db_init import *
+import RPi.GPIO as GPIO
+import time
 
-db = firestore.client()
+servo_pin = 18
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(servo_pin, GPIO.OUT)
+pwm = GPIO.PWM(servo_pin, 50)
+pwm.start(7.5)
 
-doc_ref = db.collection('person').document('Name')
-doc_ref.set({'Name' : 'MJ'})
+smartdoor_state = False
+authorized = 1
 
-doc_ref = db.collection('person').document('Face_image')
-doc_ref.set({'Person' : 'picture'})
+for cnt in range(0, 1):
+    if authorized == 1:
 
+        smartdoor_state = True
+
+        db = firestore.client()
+
+        doc_ref = db.collection('person').document('Name')
+        doc_ref.set({'Name': 'MJ'})
+
+        doc_ref = db.collection('person').document('Face_image')
+        doc_ref.set({'Person': 'picture'})
+
+        doc_ref = db.collection('person').document('Door_state')
+        doc_ref.set({'Time': '00:00', 'State': str(smartdoor_state)})
+
+        doc_ref = db.collection('person').document('Camera_state')
+        doc_ref.set({'State': 'off'})
+
+        # blob = bucket.blob('Images/' + 'dd1.jpg')
+        # blob.upload_from_filename(filename='./Images/' + 'dd1.jpg')
+        # print(blob.public_url)
+
+        pwm.ChangeDutyCycle(12.5)
+        time.sleep(3.0)
+
+    else:
+
+        smartdoor_state = False
+
+        db = firestore.client()
+
+        doc_ref = db.collection('person').document('Name')
+        doc_ref.set({'Name': 'MJ'})
+
+        doc_ref = db.collection('person').document('Face_image')
+        doc_ref.set({'Person': 'picture'})
+
+        doc_ref = db.collection('person').document('Door_state')
+        doc_ref.set({'Time': '00:00', 'State': str(smartdoor_state)})
+
+        doc_ref = db.collection('person').document('Camera_state')
+        doc_ref.set({'State': 'off'})
+
+        # blob = bucket.blob('Images/' + 'dd2.jpg')
+        # blob.upload_from_filename(filename='./Images/' + 'dd2.jpg')
+        # print(blob.public_url)
+
+        pwm.ChangeDutyCycle(7.5)
+        time.sleep(1.0)
+
+smartdoor_state = False
 doc_ref = db.collection('person').document('Door_state')
-doc_ref.set({'Time' : '00:00', 'State' : 'off'})
+doc_ref.set({'Time': '00:00', 'State': str(smartdoor_state)})
+pwm.ChangeDutyCycle(7.5)
+time.sleep(1.0)
 
-doc_ref = db.collection('person').document('Camera_state')
-doc_ref.set({'State' : 'off'})
+pwm.stop()
+GPIO.cleanup()
 
-blob = bucket.blob('Images/' + 'dd.jpg')
-blob.upload_from_filename(filename='./Images/' + 'dd.jpg')
-print(blob.public_url)
+# from uuid import uuid4
+
+# from firebase_admin import firestore
+# from db_init import *
+
+# db = firestore.client()
+
+# doc_ref = db.collection('person').document('Name')
+# doc_ref.set({'Name' : 'MJ'})
+
+# doc_ref = db.collection('person').document('Face_image')
+# doc_ref.set({'Person' : 'picture'})
+
+# doc_ref = db.collection('person').document('Door_state')
+# doc_ref.set({'Time' : '00:30', 'State' : 'off'})
+
+# doc_ref = db.collection('person').document('Camera_state')
+# doc_ref.set({'State' : 'off'})
+
+# blob = bucket.blob('Images/' + 'dd.jpg')
+# blob.upload_from_filename(filename='./Images/' + 'dd.jpg')
+# print(blob.public_url)
 
 # import json
 #

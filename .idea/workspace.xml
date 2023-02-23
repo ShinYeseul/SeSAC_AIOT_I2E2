@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63d4c21e-6f54-4543-9461-52e9e7063068" name="Changes" comment="[fix]: 이름 수정 'db.py'">
-      <change afterPath="$PROJECT_DIR$/firebase_wonchil.py" afterDir="false" />
+    <list default="true" id="63d4c21e-6f54-4543-9461-52e9e7063068" name="Changes" comment="[refactor]: DB update 'db.py'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/i2e2_web_test/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/i2e2_web_test/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676873664274</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[refactor]: DB update 'db.py'">
+      <created>1677038472238</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1677038472238</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,6 +207,7 @@
     <MESSAGE value="[feat]: Implement 'dazzle_webapp'" />
     <MESSAGE value="[feat]: Implement 'i2e2_webapp'" />
     <MESSAGE value="[fix]: 이름 수정 'db.py'" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix]: 이름 수정 'db.py'" />
+    <MESSAGE value="[refactor]: DB update 'db.py'" />
+    <option name="LAST_COMMIT_MESSAGE" value="[refactor]: DB update 'db.py'" />
   </component>
 </project>
